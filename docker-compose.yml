@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  escola-api:
+    build: .
+    container_name: escola-api
+    ports:
+      - "9000:9000"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONPATH=/app
+    restart: unless-stopped
